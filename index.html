@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Sri Mulyani</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(
+                135deg,
+                #fce7f3,
+                #fbcfe8,
+                #f9a8d4
+            );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 35px 15px 50px;
+            overflow-x: hidden;
+            color: #831843;
+        }
+
+        /* Hiasan hati mengambang */
+        .heart {
+            position: fixed;
+            bottom: -50px;
+            font-size: 25px;
+            opacity: 0.7;
+            pointer-events: none;
+            animation: floatUp 10s linear infinite;
+        }
+
+        .heart:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .heart:nth-child(2) {
+            left: 35%;
+            animation-delay: 3s;
+        }
+
+        .heart:nth-child(3) {
+            left: 70%;
+            animation-delay: 1s;
+        }
+
+        .heart:nth-child(4) {
+            left: 90%;
+            animation-delay: 5s;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            15% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-120vh) rotate(25deg);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            width: 100%;
+            max-width: 440px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .heading .flower {
+            display: block;
+            font-size: 52px;
+            margin-bottom: 8px;
+        }
+
+        .heading h1 {
+            font-size: 28px;
+            letter-spacing: 2px;
+            color: #9d174d;
+        }
+
+        .heading p {
+            font-size: 13px;
+            margin-top: 8px;
+            letter-spacing: 2px;
+            color: #be185d;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(157, 23, 77, 0.18);
+        }
+
+        .profile {
+            text-align: center;
+            padding: 30px 20px 25px;
+            background: linear-gradient(
+                135deg,
+                #fce7f3,
+                #fbcfe8
+            );
+            border-bottom: 2px dashed #f9a8d4;
+        }
+
+        .avatar {
+            width: 105px;
+            height: 105px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: linear-gradient(
+                135deg,
+                #ec4899,
+                #be185d
+            );
+            color: white;
+            border: 5px solid white;
+            box-shadow: 0 6px 20px rgba(190, 24, 93, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .profile h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #831843;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #fce7f3;
+            border: 1px solid #f9a8d4;
+            color: #9d174d;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 25px;
+        }
+
+        .content h3 {
+            font-size: 19px;
+            margin-bottom: 15px;
+            color: #be185d;
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 0;
+            border-bottom: 1px solid #fce7f3;
+        }
+
+        .info:last-of-type {
+            border-bottom: none;
+        }
+
+        .info-icon {
+            width: 43px;
+            height: 43px;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fce7f3;
+            border-radius: 13px;
+            font-size: 22px;
+        }
+
+        .info-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .info-text small {
+            display: block;
+            color: #be7195;
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+
+        .info-text strong {
+            color: #831843;
+            font-size: 14px;
+            overflow-wrap: anywhere;
+        }
+
+        .button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 13px;
+            background: linear-gradient(90deg, #ec4899, #be185d);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(190, 24, 93, 0.2);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 22px;
+            color: #9d174d;
+            font-size: 12px;
+            line-height: 1.9;
+        }
+
+        .footer .message {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 400px) {
+            .heading h1 {
+                font-size: 23px;
+            }
+
+            .profile h2 {
+                font-size: 21px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="heart">💗</div>
+    <div class="heart">🌸</div>
+    <div class="heart">💕</div>
+    <div class="heart">🌷</div>
+
+    <main class="container">
+
+        <header class="heading">
+            <span class="flower">🌸💗🌸</span>
+            <h1>PINK PROFILE</h1>
+            <p>BIODATA SISWA</p>
+        </header>
+
+        <section class="card">
+
+            <div class="profile">
+                <div class="avatar">SM</div>
+                <h2>Sri Mulyani</h2>
+                <span class="badge">🎓 KELAS X TJKT 1</span>
+            </div>
+
+            <div class="content">
+                <h3>💖 Biodata Lengkap</h3>
+
+                <div id="biodata">
+
+                    <div class="info">
+                        <div class="info-icon">👩</div>
+                        <div class="info-text">
+                            <small>Nama Lengkap</small>
+                            <strong>Sri Mulyani</strong>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <div class="info-icon">📚</div>
+                        <div class="info-text">
+                            <small>Kelas</small>
+                            <strong>X TJKT 1</strong>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <div class="info-icon">🎂</div>
+                        <div class="info-text">
+                            <small>Umur</small>
+                            <strong>16 Tahun</strong>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <div class="info-icon">🌷</div>
+                        <div class="info-text">
+                            <small>Jenis Kelamin</small>
+                            <strong>Perempuan</strong>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <div class="info-icon">🏫</div>
+                        <div class="info-text">
+                            <small>Nama Sekolah</small>
+                            <strong>SMK Banjar Asri</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button
+                    class="button"
+                    id="toggleBtn"
+                    onclick="toggleBiodata()">
+                    💗 Sembunyikan Biodata
+                </button>
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <p class="message">🌸 Stay Sweet, Stay Beautiful 🌸</p>
+            <p>&copy; 2026 Sri Mulyani</p>
+            <p>Website Biodata Siswa | X TJKT 1</p>
+        </footer>
+
+    </main>
+
+    <script>
+        function toggleBiodata() {
+            const biodata = document.getElementById("biodata");
+            const button = document.getElementById("toggleBtn");
+
+            if (biodata.style.display === "none") {
+                biodata.style.display = "block";
+                button.textContent = "💗 Sembunyikan Biodata";
+            } else {
+                biodata.style.display = "none";
+                button.textContent = "🌸 Tampilkan Biodata";
+            }
+        }
+    </script>
+
+</body>
+          </html>
+          
